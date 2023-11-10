@@ -1,3 +1,4 @@
+# This is my first code with git in vscode
 provider "aws" {
   profile = "default"
   region = "us-east-1"
