@@ -23,20 +23,6 @@ resource "aws_instance" "web" {
   tags = local.test-tags
 }
 
-resource "aws_iam_user" "test-user" {
-  name = "mysthreeuser"
-  path = "/"
-
-  tags = {
-    Name = "mysthreeuser"
-    account = "finance"
-  }
-}
-
-resource "aws_iam_access_key" "test-key" {
-  user    = aws_iam_user.test-user.name
-}
-
 data "aws_iam_policy" "user-policy" {
   name = "list-bucket-policy"
 }
