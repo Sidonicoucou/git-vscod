@@ -4,12 +4,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-# provider "aws" {
-#   region = "us-east-1"
-#   access_key = "AKIAZW6Q42G64VTBDG2Z"
-#   secret_key = "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"
-# }
-
  locals {
    test-tags = {
      team = "devop"
