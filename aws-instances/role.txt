@@ -1,0 +1,11 @@
+aws iam create-instance-profile \
+    --instance-profile-name ssm-instance-profile
+aws iam add-role-to-instance-profile \
+    --role-name ssm-role \
+    --instance-profile-name ssm-instance-profile
+aws ec2 run-instances \
+    --image-id  \
+    --instance-type t2.micro \
+    --key-name \
+    --security-group-ids  \
+    --iam-instance-profile Name=ssm-instance-profile
