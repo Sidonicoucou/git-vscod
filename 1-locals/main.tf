@@ -8,6 +8,7 @@ provider "aws" {
    test-tags = {
      team = "devop"
      env = "test"
+     name = "Tomcat"
    }
 }
 
